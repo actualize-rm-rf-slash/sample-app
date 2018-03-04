@@ -9,6 +9,9 @@ class PagesController < ApplicationController
   end
 
   def time_method
-    render json: {time: Time.now.strftime("%a, %e %b %Y %H:%M:%S %z")}
+    x = 4
+    y = x + 5
+    current_time = Time.now.strftime("%a, %e %b %Y %H:%M:%S %z")
+    render json: {time: current_time, sum: y}
   end
 end
